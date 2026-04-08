@@ -52,27 +52,35 @@ function drawRectangle() {
 }
 
 function drawName() {
+	//Links script to HTML canvas & creates the drawing tool
 	var canvas = document.getElementById("myCanvas");
 	var ctx = canvas.getContext("2d");
+	//Sets the font size for the text (the name "inaaya") that will be displayed
 	ctx.font = "20px Times New Roman";
+	//Draws the text "Inaaya" at that specific placement
 	ctx.fillText("Inaaya", 100, 150);
 }
 
 function drawImage() {
+	//Links script to HTML canvas & creates the drawing tool
 	var canvas = document.getElementById("myCanvas");
 	var ctx = canvas.getContext("2d");
+	//Creates a new image object
 	var img = new Image();
 
+	//Once the image has successfully loaded, this will help it properly display on the website
 	img.onload = function() {
 		ctx.drawImage(img, 50, 50, 100, 100);
 	};
 
+	//Links the URL source of the image so that it can be pulled and displayed
 	img.src = "https://media.istockphoto.com/id/1145618475/photo/villefranche-on-sea-in-evening.jpg?s=612x612&w=0&k=20&c=vQGj6uK7UUVt0vQhZc9yhRO_oYBEf8IeeDxGyJKbLKI=";
 }
 
 function clearCanvas() {
 	var canvas = document.getElementById("myCanvas");
 	var ctx = canvas.getContext("2d");
+	//Wipes the entire canvas clean so that no shape, name, or image is still displayed.
 	ctx.clearRect(0, 0, canvas.width, canvas.height)
 }
 
