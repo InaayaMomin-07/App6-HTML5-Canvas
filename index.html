@@ -41,9 +41,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 
 function drawRectangle() {
+	//Links the script to the HTML canvas element
 	var canvas = document.getElementById("myCanvas");
+	//Creates the drawing tool for 2D graphics being "inserted" on the canvas like the image, shape, and name
 	var ctx = canvas.getContext("2d");
+	//Sets the color for the shape. For specific codes the number & letter identification could also be used
 	ctx.fillStyle = "green";
+	//Gives the specifics of the rectangle including placement and size
 	ctx.fillRect(50, 50, 150, 75);
 }
 
